@@ -1,11 +1,11 @@
-import React from "react";
-import { StyleSheet, View } from "react-native";
-import Card from "./card";
-import Carousel from "./Carousel";
-import { Spin } from "./spin";
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import Card from './card';
+import Carousel from './Carousel';
+import { Spin } from './spin';
 
-import { data } from "./carouselData";
-// import { EasingComp } from './easing';
+import { data } from './carouselData';
+import { EasingComp } from "./easing";
 
 export class Home extends React.Component {
   renderItems = ({ item, index }) => {
@@ -17,9 +17,9 @@ export class Home extends React.Component {
       <View
         style={{
           flex: 1,
-          width: "100%",
-          justifyContent: "center",
-          alignItems: "center"
+          width: '100%',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
         {/* <Carousel
@@ -28,13 +28,13 @@ export class Home extends React.Component {
           renderItem={this.renderItems}
           itemWidth={275}
         /> */}
-        <Spin />
-        {/* <EasingComp /> */}
+        {/* <Spin /> */}
+        <EasingComp />
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  carousel: { flex: 1 }
+  carousel: { flex: 1 },
 });
